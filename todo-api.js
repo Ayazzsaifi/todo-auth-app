@@ -2,6 +2,7 @@ const express = require("express");
 const bcrypt = require('bcrypt')
 const app = express();
 require('dotenv').config()
+app.use(express.static('public'))
 const JWT_SECRET = process.env.JWT_SECRET;
 const jwt = require("jsonwebtoken");
 app.use(express.json());
@@ -24,7 +25,7 @@ async function encrypt(req, res, next) {
 
 
 
-app.post("/signup",encrypt, async function (req, res) {
+app.post("/signup", encrypt, async function (req, res) {
     const username = req.body.username;
     const password = req.body.password;
 

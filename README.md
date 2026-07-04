@@ -1,34 +1,29 @@
 # Todo Auth App
 
-A backend TODO application with JWT-based authentication. Users can sign up, sign in, and manage their own todos through protected API routes.
+A full-stack Todo application with JWT-based authentication, built as part of my self-taught full-stack journey (100xDevs Cohort 3).
 
 ## Features
 
-- User signup and signin
-- JWT-based authentication
-- Protected routes (only accessible with a valid token)
-- Create, read, update, and delete todos
-- Mark todos as complete
+- **User Authentication**
+  - Signup with bcrypt password hashing
+  - Signin with JWT token generation
+  - Protected routes using token-based middleware
+
+- **Todo Management (CRUD)**
+  - Create new todos
+  - Read/display all todos
+  - Update todo completion status
+  - Delete todos
+
+- **Frontend**
+  - Vanilla JS + Axios for API calls
+  - JWT stored in localStorage
+  - Dynamic DOM rendering (no page reloads needed for todo actions)
 
 ## Tech Stack
 
-- Node.js
-- Express.js
-- jsonwebtoken (JWT)
-- dotenv
+- **Backend:** Node.js, Express
+- **Auth:** jsonwebtoken, bcrypt
+- **Frontend:** HTML, CSS, JavaScript, Axios (via CDN)
 
-## API Routes
-
-| Method | Route          | Description                  | Auth Required |
-|--------|----------------|-------------------------------|----------------|
-| POST   | /signup        | Register a new user           | No             |
-| POST   | /signin        | Log in and receive a JWT      | No             |
-| GET    | /todos         | Get all todos                 | Yes            |
-| POST   | /todos         | Create a new todo             | Yes            |
-| PUT    | /todos/:id     | Edit a todo or mark as done   | Yes            |
-| DELETE |
-
-
-## Security
-- Passwords are hashed using bcrypt (via middleware) before being stored — plain text passwords are never saved.
-- JWT is used for authentication after successful signin.
+## Project Structure
