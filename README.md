@@ -27,3 +27,8 @@ A backend TODO application with JWT-based authentication. Users can sign up, sig
 | POST   | /todos         | Create a new todo             | Yes            |
 | PUT    | /todos/:id     | Edit a todo or mark as done   | Yes            |
 | DELETE |
+
+
+## Security
+- Passwords are hashed using bcrypt (via middleware) before being stored — plain text passwords are never saved.
+- JWT is used for authentication after successful signin.
