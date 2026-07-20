@@ -26,10 +26,4 @@ A full-stack Todo application with JWT-based authentication, built as part of my
 - **Auth:** jsonwebtoken, bcrypt
 - **Frontend:** HTML, CSS, JavaScript, Axios (via CDN)
 
-- ## Tech Stack
-
-- **Backend:** Node.js, Express
-- **Auth:** jsonwebtoken, bcrypt
-- **Frontend:** HTML, CSS, JavaScript, Axios (via CDN)
-
 ## Project Structure
